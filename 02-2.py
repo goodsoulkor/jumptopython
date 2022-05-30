@@ -226,3 +226,57 @@ print(f"{y:10.4f}")
 
 # { }
 print(f"{{ and }}")
+print()
+
+# 문자열 관련 함수
+# 문자 개수 세기 count
+a = "hobby"
+print(a.count("b"))
+
+# 위치 알려주기1 find
+# 처음 나온 위치를 알려주고 없으면 -1을 반환한다.
+a = "Python is the best choice"
+print(a.find("b"))
+print(a.find("k"))
+
+# 위치 알려주기2 index
+# 없으면 오류 발생한다.
+a = "Life is too shrot"
+print(a.index("t"))
+# print(a.index("k"))
+
+# 문자열 삽입 join
+print(",".join("abcd"))
+print(",".join(["a", "b", "c", "d"]))
+
+# 소문자를 대문자로 바꾸기 upper
+a = "hi"
+print(a.upper())
+
+# 대문자를 소문자로 바꾸기
+a = "HI"
+print(a.lower())
+
+# 왼쪽 공백 지우기 lstrip
+a = " hi "
+print(a.lstrip())
+
+# 오른쪽 공백 지우기 rstrip
+a = " hi "
+print(a.rstrip())
+
+# 양쪽 공백 지우기 strip
+a = " hi "
+print(a.strip())
+
+# 문자열 바꾸기 replace
+a = "Life is too shrot"
+print(a.replace("Life", "Your leg"))
+
+# 문자열 나누기 split
+# 아무값도 없는 경우 공백을 기준으로 문자열을 나누어준다.
+# 특정 값을 입력한 경우 그 값을 구분자로 나누어 준다.
+a = "Life is too shrot"
+print(a.split())
+b = "a:b:c:d"
+print(b.split(":"))
