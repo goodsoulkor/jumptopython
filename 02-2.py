@@ -148,3 +148,81 @@ print("rate is %s" % 3.234)
 
 # 포매팅 연산자와 %를 함께 사용
 print("Error is %d%%" % 98)
+
+# 포맷 코드와 숫자 함께 사용하기
+# 1. 정렬과 공백
+print("%10s" % "hi")
+print("%-10s" % "hi")
+
+# 2. 소수점 표현하기
+print("%0.4f" % 3.14125839)
+print("%10.4f" % 3.141215)
+print()
+
+# format 함수를 사용한 포매팅
+# 숫자 바로 대입
+print("I eat {0} apples.".format(3))
+
+# 문자열 바로 대입
+print("I eat {0} apples.".format("five"))
+
+# 숫자 값을 가진 변수로 대입하기
+number = 3
+print("I eat {0} apples.".format(number))
+
+# 두 개 이상의 값 넣기
+number = 10
+day = "three"
+print("I ate {0} apples. so I was sick for {1} days.".format(number, day))
+
+# 이름으로 넣기
+print("I ate {number} apples. so I was sick for {day} days.".format(number=10, day=3))
+
+# 인덱스와 이름 혼용
+print("I ate {0} apples. so I was sick for {day} days.".format(10, day=3))
+print()
+
+# 왼쪽 정렬
+print("{0:<10}".format("hi"))
+
+# 오른쪽 정렬
+print("{0:>10}".format("hi"))
+
+# 가운데 정렬
+print("{0:^10}".format("hi"))
+
+# 공백 채우기
+print("{0:=^10}".format("hi"))
+print("{0:!<10}".format("hi"))
+
+# 소수점 표현하기
+y = 3.141592
+print("{0:0.4f}".format(y))
+print("{0:10.4f}".format(y))
+
+# { 또는 } 표현하기
+print("{{ and }}".format())
+print()
+
+# f 문자열 포매팅
+# 파이썬 3.6 부터 가능
+name = "홍길동"
+age = 30
+print(f"나의 이름은 {name}입니다. 나이는 {age}살 입니다.")
+print(f"나는 내년에 {age+1}살이 된다.")
+
+# 딕셔너리
+d = {"name": "홍길동", "age": 30}
+print(f"나의 이름은 {d['name']}입니다. 나이는 {d['age']}입니다.")
+
+# 정렬
+print(f"{'hi':=^10}")
+print(f"{'hi':!<10}")
+
+# 소수점
+y = 3.141592
+print(f"{y:0.4f}")
+print(f"{y:10.4f}")
+
+# { }
+print(f"{{ and }}")
